@@ -1,12 +1,15 @@
 {
-    "name": "Isaac Mission Suite",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "name": "Isaac Mission Environment",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "features": {
         "docker-in-docker": "latest"
     },
-    "forwardPorts": [1883, 5432, 3000],
-    "postCreateCommand": "sudo service docker start && ./setup.sh",
+    "forwardPorts": [5000, 5432, 3000],
+    "remoteUser": "vscode",
     "mounts": [
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
-    ]
+    ],
+    "overrideCommand": false
 }
