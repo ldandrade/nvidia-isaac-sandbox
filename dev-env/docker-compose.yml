@@ -57,6 +57,7 @@ services:
   mission-simulator:
     image: ${MISSION_SIMULATOR_IMAGE}
     container_name: mission-simulator
+    command: ["--robots", "${ROBOTS}"]
 
 networks:
   default:

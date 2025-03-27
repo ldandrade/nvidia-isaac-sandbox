@@ -1,0 +1,12 @@
+{
+    "name": "Isaac Mission Suite",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "docker-in-docker": "latest"
+    },
+    "forwardPorts": [1883, 5432, 3000],
+    "postCreateCommand": "sudo service docker start && ./setup.sh",
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ]
+}

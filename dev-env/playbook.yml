@@ -49,4 +49,4 @@
         enabled: yes
 
     - name: Start Docker Compose services
-      command: docker compose -f /home/vagrant/docker-compose.yml up -d
+      command: sudo docker compose -f /home/vagrant/docker-compose.yml up -d
