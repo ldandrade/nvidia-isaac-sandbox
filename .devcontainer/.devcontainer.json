@@ -12,5 +12,5 @@
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
     ],
     "overrideCommand": false,
-    "postCreateCommand": "bash /workspaces/.devcontainer/setup.sh"
+    "postStartCommand": "bash /workspaces/.devcontainer/setup.sh"
 }
