@@ -1,15 +1,8 @@
 {
   "name": "Isaac Mission Environment",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
   "features": {
     "ghcr.io/devcontainers/features/docker:1": {}
   },
-  "mounts": [
-    "source=/var/run/docker-host.sock,target=/var/run/docker.sock,type=bind"
-  ],
   "forwardPorts": [5000, 5432, 3000],
-  "remoteUser": "vscode",
-  "postCreateCommand": "docker-compose -f .devcontainer/docker-compose.yml up -d"
+  "remoteUser": "vscode"
 }
