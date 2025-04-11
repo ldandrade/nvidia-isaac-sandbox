@@ -37,7 +37,7 @@ If everything is fine, you should be able to see 5 containers running as listed 
 
 You can access the Mission Dispatch OpenAPI UI by checking the forwarded address on port 5000 through VS Code Ports tab when connected to Codespaces as shown in the picture below:
 
-![alt text](image.png)
+![alt text](image-3.png)
 
 > **Note:** Add the suffix /docs to the forwarded address to access the OpenAPI UI:
 
@@ -183,7 +183,7 @@ docker run -it --network host nvcr.io/nvidia/isaac/mission-simulator --robots R2
 ### Webinars
 
 Learn more about missions by watching the on-demand webinar:
- 
+
 Build Connected Robots with NVIDIA Isaac Dispatch and Client
 https://gateway.on24.com/wcc/experience/elitenvidiabrill/1407606/3998202/isaac-ros-webinar-series
 
