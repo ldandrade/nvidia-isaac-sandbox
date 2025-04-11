@@ -2,12 +2,11 @@ version: "3.3"
 services:
   mosquitto:
     image: eclipse-mosquitto:latest
-    network_mode: "host"
     volumes:
-      - type: bind
-        source: /mosquitto.sh
-        target: /mosquitto.sh
-    entrypoint: ["/bin/sh", "-c", "chmod +x /mosquitto.sh && sh /mosquitto.sh ${MQTT_PORT_TCP} ${MQTT_PORT_WEBSOCKET}"]
+      - ./mosquitto.sh:/mosquitto.sh
+      - ./mosquitto-config:/mosquitto/config
+    command: /bin/sh -c "chmod +x /mosquitto.sh && /mosquitto.sh ${MQTT_PORT_TCP} ${MQTT_PORT_WEBSOCKET}"
+    network_mode: "host"
 
   postgres:
     image: postgres:14.5

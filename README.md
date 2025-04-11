@@ -182,7 +182,9 @@ docker run -it --network host nvcr.io/nvidia/isaac/mission-simulator --robots R2
 
 ### Webinars
 
-Learn more about missions by watching the on-demand webinar: Build Connected Robots with NVIDIA Isaac Dispatch and Client
+Learn more about missions by watching the on-demand webinar:
+ 
+Build Connected Robots with NVIDIA Isaac Dispatch and Client
 https://gateway.on24.com/wcc/experience/elitenvidiabrill/1407606/3998202/isaac-ros-webinar-series
 
 ### Repositories
