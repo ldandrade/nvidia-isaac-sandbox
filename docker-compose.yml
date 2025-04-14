@@ -63,5 +63,6 @@ services:
 
   mqtt-ui:
     image: emqx/mqttx-web
+    network_mode: "host"
     ports:
-      - "9001:80"
+      - "9080:80"
