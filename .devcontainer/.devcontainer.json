@@ -21,7 +21,7 @@
 
 	"forwardPorts": [5000, 5432, 3000],
 
-  "postCreateCommand": "chmod +x .devcontainer/post_create.sh && bash .devcontainer/post_create.sh",
+  "postCreateCommand": "/bin/sh -c chmod +x .devcontainer/post_create.sh && /bin/sh -c .devcontainer/post_create.sh",
 
 	"customizations": {
 		"vscode": {

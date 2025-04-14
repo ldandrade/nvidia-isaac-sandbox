@@ -50,3 +50,18 @@ services:
     network_mode: "host"
     depends_on:
       - mission-dispatch
+
+  dozzle:
+    image: ghcr.io/amir20/dozzle:latest
+    ports:
+      - "8888:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    network_mode: "host"
+    environment:
+      - DOZZLE_LEVEL=info
+
+  mqtt-ui:
+    image: emqx/mqttx-web
+    ports:
+      - "9001:80"
