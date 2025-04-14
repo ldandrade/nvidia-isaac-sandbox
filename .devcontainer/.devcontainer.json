@@ -19,7 +19,7 @@
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
 	},
 
-	"forwardPorts": [5000, 5432, 3000],
+	"forwardPorts": [5000, 5432, 3000, 1883, 9001],
 
   "postCreateCommand": "/bin/sh -c chmod +x .devcontainer/post_create.sh && /bin/sh -c .devcontainer/post_create.sh",
 

@@ -7,6 +7,9 @@
     - [Create a robot](#create-a-robot)
     - [Create a mission](#create-a-mission)
     - [Simulate a mission](#simulate-a-mission)
+- [Monitoring](#monitoring)
+    - [Dozzle](#dozzle)
+    - [EMQx MQTTX Web](#emqx-mqttx-web)
 - [References](#references)
     - [Webinars](#webinars)
     - [Repositories](#repositories)
@@ -189,7 +192,47 @@ Looking through the logs of the Mission Dispatch, you will see the following:
 [Isaac Mission Dispatch] | INFO: [R2D2] Robot state: RobotStateV1.ON_TASK -> RobotStateV1.IDLE
 ```
 
+## Monitoring
+
+### Dozzle
+
+In order to facilitate access to docker logs, troubleshooting and monitoring, Dozzle was included in the Docker compose deployment file. 
+
+> **Note:** You may need to manually expose its port (8080) through VS Code Ports tab.
+
+![alt text](image-4.png)
+
+You can then access Dozzle UI as depicted below:
+
+![alt text](image-1.png)
+
+### EMQx MQTTX Web
+
+You can also leverage EMQx MQTTX Web UI to track MQTT messages passing through Mosquitto.
+
+Because of security limitations, you'd have to access the Web UI from within Codespaces UI as can be seen in the picture below:
+
+![alt text](image-5.png)
+
+The connection configuration for should be filled as following:
+
+- Name: Mosquitto
+- Host: ws://crispy-dollop-p96gwrp7jfrqvj-9001.app.github.dev
+- Port: 9001
+- Client ID: mqttx-codespace-client
+- Path: /
+- Username: (leave blank)
+- Password: (leave blank)
+- SSL/TLS: Disabled
+
+> **Note:** If you want to connect to it using a local MQTT Client in your local PC you would need to setup SSL/TLS.
+
 ## References
+
+### Documentation
+
+https://mqttx.app/
+https://dozzle.dev/guide/what-is-dozzle
 
 ### Webinars
 
