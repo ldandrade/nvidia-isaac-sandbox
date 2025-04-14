@@ -1,0 +1,7 @@
+fastapi[all]
+pytest
+httpx
+black
+ruff
+flake8
+mypy
